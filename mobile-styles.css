@@ -17,7 +17,6 @@ header {
   color: #ffffff;
   text-align: center;
   padding: 10px 0;
-  margin: 0; /* Extend to the edges of the page */
 }
 
 header h1 {
@@ -62,7 +61,7 @@ footer {
 
 .menu a {
   text-decoration: none;
-  color: #333333; /* Restored original link color */
+  color: #213075; /* Updated color */
   font-size: 1rem;
 }
 
@@ -88,5 +87,10 @@ footer {
 
   .menu a {
     font-size: 0.9rem;
+  }
+
+  /* Adjust padding for header and footer */
+  header, footer {
+    padding: 10px 0;
   }
 }
