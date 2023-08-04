@@ -6,9 +6,9 @@ body, h1, h2, p, ul, li {
 
 /* Set a maximum width for the content */
 .container {
-  max-width: 1100px;
+  max-width: 100%; /* Adjusted to take full width of the screen */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px; /* Added padding for spacing on the edges */
 }
 
 /* Header styling */
