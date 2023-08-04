@@ -118,4 +118,14 @@ footer hr {
   main {
     margin: 0 5px; /* Add margin to the sides of the content */
   }
+  
+  /* Center the image caption */
+  .caption-container {
+    text-align: center;
+  }
+  
+  /* Center the header table */
+  header table {
+    margin: 0 auto;
+  }
 }
