@@ -13,7 +13,7 @@ body, h1, h2, p, ul, li {
 
 /* Header styling */
 header {
-  background-color: #333333;
+  background-color: #213075; /* Updated color */
   color: #ffffff;
   text-align: center;
   padding: 10px 0;
@@ -31,7 +31,7 @@ main {
 
 main h2 {
   font-size: 1.2rem;
-  margin-bottom: 15px; /* Add spacing between headers and paragraphs */
+  margin-bottom: 15px;
 }
 
 main p {
@@ -42,7 +42,7 @@ main p {
 
 /* Footer styling */
 footer {
-  background-color: #333333;
+  background-color: #213075; /* Updated color */
   color: #ffffff;
   text-align: center;
   padding: 10px 0;
