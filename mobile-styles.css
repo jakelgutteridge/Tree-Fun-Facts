@@ -69,11 +69,6 @@ footer {
   text-align: center;
 }
 
-.image-container img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Small screen adjustments */
 @media screen and (max-width: 600px) {
   header h1 {
