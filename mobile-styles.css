@@ -4,6 +4,13 @@ body, h1, h2, p, ul, li {
   padding: 0;
 }
 
+/* Add spacing on the edges of the page */
+body {
+  margin: 0;
+  padding: 0 10px; /* Adjust as needed */
+  box-sizing: border-box;
+}
+
 /* Set a maximum width for the content */
 .container {
   max-width: 1100px;
@@ -17,6 +24,7 @@ header {
   color: #ffffff;
   text-align: center;
   padding: 10px 0;
+  margin: 0; /* Extend to the edges of the page */
 }
 
 header h1 {
@@ -27,6 +35,8 @@ header h1 {
 /* Main content styling */
 main {
   padding: 20px 0;
+  margin: 0 10px; /* Add margin to the sides of the content */
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
 main h2 {
@@ -46,6 +56,7 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 10px 0;
+  margin: 0; /* Extend to the edges of the page */
 }
 
 /* Navigation menu styling */
@@ -60,7 +71,7 @@ footer {
 
 .menu a {
   text-decoration: underline; /* Underline the links */
-  color: #333333; /* Restored original link color */
+  color: #213075; /* Updated link color */
   font-size: 1rem;
 }
 
@@ -86,5 +97,15 @@ footer {
 
   .menu a {
     font-size: 0.9rem;
+  }
+
+  /* Adjust padding for header and footer */
+  header, footer {
+    padding: 10px 0;
+  }
+
+  /* Adjust margins for main content */
+  main {
+    margin: 0 5px; /* Add margin to the sides of the content */
   }
 }
