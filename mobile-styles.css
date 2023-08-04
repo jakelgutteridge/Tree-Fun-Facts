@@ -31,6 +31,7 @@ main {
 
 main h2 {
   font-size: 1.2rem;
+  margin-bottom: 15px; /* Add spacing between headers and paragraphs */
 }
 
 main p {
@@ -60,7 +61,6 @@ footer {
 .menu a {
   text-decoration: none;
   color: #333333;
-  font-weight: bold;
   font-size: 1rem;
 }
 
