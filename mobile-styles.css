@@ -20,8 +20,6 @@ body {
 
 /* Header styling */
 header {
-  background-color: #213075; /* Updated color */
-  color: #ffffff;
   text-align: center;
   padding: 10px 0;
   margin: 0; /* Extend to the edges of the page */
@@ -30,6 +28,13 @@ header {
 header h1 {
   font-size: 1.5rem;
   margin: 0;
+}
+
+/* Add a horizontal rule at the bottom of the header */
+header hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #333;
 }
 
 /* Main content styling */
@@ -52,11 +57,16 @@ main p {
 
 /* Footer styling */
 footer {
-  background-color: #213075; /* Updated color */
-  color: #ffffff;
   text-align: center;
   padding: 10px 0;
   margin: 0; /* Extend to the edges of the page */
+}
+
+/* Add a horizontal rule at the top of the footer */
+footer hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #333;
 }
 
 /* Navigation menu styling */
