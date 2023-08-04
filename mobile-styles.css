@@ -46,7 +46,6 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 10px 0;
-  margin: 0; /* Extend to the edges of the page */
 }
 
 /* Navigation menu styling */
@@ -60,8 +59,8 @@ footer {
 }
 
 .menu a {
-  text-decoration: none;
-  color: #213075; /* Updated color */
+  text-decoration: underline; /* Underline the links */
+  color: #333333; /* Restored original link color */
   font-size: 1rem;
 }
 
@@ -87,10 +86,5 @@ footer {
 
   .menu a {
     font-size: 0.9rem;
-  }
-
-  /* Adjust padding for header and footer */
-  header, footer {
-    padding: 10px 0;
   }
 }
