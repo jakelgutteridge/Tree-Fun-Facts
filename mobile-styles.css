@@ -32,3 +32,8 @@ footer address {
 header table.nav {
   display: none; /* Hide the smaller table */
 }
+
+.image-container {
+  float: none;
+  display: inline-block;
+}
