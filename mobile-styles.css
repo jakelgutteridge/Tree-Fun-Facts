@@ -29,6 +29,6 @@ footer address {
   padding: 5px 0;
 }
 
-header table.tree-links {
+header table.nav {
   display: none; /* Hide the smaller table */
 }
