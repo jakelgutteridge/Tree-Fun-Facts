@@ -1,3 +1,5 @@
+/*
+
 /* Example mobile-specific changes */
 header {
   padding: 10px;
@@ -36,4 +38,10 @@ header table.nav {
 .image-container {
   float: none;
   display: inline-block;
+}
+
+*/
+
+body {
+  color: black;
 }
