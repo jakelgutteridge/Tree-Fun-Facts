@@ -12,6 +12,29 @@
     <link rel="stylesheet" href="../mobile-styles.css" media="screen and (max-width: 600px)">
   </head>
 
+  <script>
+window.addEventListener('DOMContentLoaded', (event) => {
+    const breadcrumb = document.getElementById('breadcrumb');
+    const pathSegments = window.location.pathname.split('/').filter(segment => segment !== ''); // Remove empty segments
+
+    let breadcrumbHtml = 'Home';
+
+    for (let i = 0; i < pathSegments.length; i++) {
+        const segment = pathSegments[i];
+        const title = getTitleFromSegment(segment);
+        breadcrumbHtml += ` &gt; ${title}`;
+    }
+
+    breadcrumb.innerHTML = breadcrumbHtml;
+});
+
+function getTitleFromSegment(segment) {
+    const segmentWithoutExtension = segment.replace('.html', '');
+    const titleAttribute = document.querySelector(`[href="${segmentWithoutExtension}"]`)?.getAttribute('title');
+    return titleAttribute || segmentWithoutExtension;
+}
+</script>
+
   <body>
 
 <header>
@@ -24,23 +47,8 @@
           </a>
         </td>
         <td>
-          <table class="nav" cellspacing="3px" style="float: right;">
-           <tr>
-             <td>
-               <a href="https://treefunfacts.com" style="color: #FFFFFF;">
-                 Home
-               </a>
-             </td>
-             <td>
-               &gt;
-             </td>
-             <td>
-               <a href="../about" style="color: #FFFFFF;">
-                 <b>About This Website</b>
-               </a>
-             </td>
-           </tr>
-         </table>
+          <div id="breadcrumb"></div>
+
         </td>
       </tr>
     </table>
