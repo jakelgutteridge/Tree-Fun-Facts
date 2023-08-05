@@ -18,20 +18,25 @@
 
 <main>
 
-<table style="width: 100%; max-width: 1100px;">
+<table cellpadding="0px" cellspacing="0px" style="width: 100%; max-width: 1100px; margin: 0px; padding: 0px;">
   <tr>
     <td>
       <img src="https://treefunfacts.com/favicon.ico">
     </td>
     <td>
-      <big><big><big>
-        <h2>404 Not Found</h2>
+      <table>
+        <tr>
+          <td colspan="2">
+            <h2>404 Not Found</h2>
         <p>The requested file was not found on this server.</p>
-        <p>Redirecting to home page in
-           <span style="display: inline;">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Redirecting to home page in</p>
+          </td>
+          <td>
              <div id="countdown"></div>
-           </span></p>
-
 <script>
 // Set the countdown initial value
 let countdownValue = 10;
@@ -53,10 +58,9 @@ function updateCountdown() {
 updateCountdown();
 const countdownInterval = setInterval(updateCountdown, 1000);
 </script>
-      </big></big></big>
-    </td>
-  </tr>
-</table>
+          </td>
+        </tr>
+      </table>
   
 </main>
 
