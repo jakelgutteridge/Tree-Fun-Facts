@@ -3,7 +3,7 @@
 <html>
 
   <head>
-    <title>Tree Fun Facts</title>
+    <title>404 Not Found</title>
     <meta charset="UTF-8">
     <meta name="description" content="Dedicated to all trees around the world and how they are amazing creations of nature.">
     <meta name="author" content="Tarant Hobbs & Jake Gutteridge">
@@ -40,6 +40,29 @@
       <big><big><big>
         <h2>404 Not Found</h2>
         <p>The requested file was not found on this server.</p>
+        <p>Redirecting to home page in <div id="countdown"></div></p>
+
+<script>
+// Set the countdown initial value
+let countdownValue = 10;
+
+// Function to update the countdown display
+function updateCountdown() {
+  const countdownElement = document.getElementById("countdown");
+  countdownElement.textContent = countdownValue;
+  
+  if (countdownValue === 0) {
+    countdownElement.textContent = "";
+    clearInterval(countdownInterval);
+  }
+  
+  countdownValue--;
+}
+
+// Start the countdown immediately
+updateCountdown();
+const countdownInterval = setInterval(updateCountdown, 1000);
+</script>
       </big></big></big>
     </td>
   </tr>
