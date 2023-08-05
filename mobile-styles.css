@@ -1,12 +1,1 @@
-/* Apply a CSS reset to remove default browser styles */
-body, h1, h2, h3, p, ul, li, table, td, th, a {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  color: black; /* Set a default text color */
-}
 
-/* Add your new mobile-specific styles here */
