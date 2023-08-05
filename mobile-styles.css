@@ -28,3 +28,7 @@ footer address {
   display: block;
   padding: 5px 0;
 }
+
+header table.tree-links {
+  display: none; /* Hide the smaller table */
+}
