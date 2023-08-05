@@ -1,46 +1,4 @@
-/*
 
-/* Example mobile-specific changes */
-header {
-  padding: 10px;
-}
-
-header h1 {
-  margin: 10px 0;
-}
-
-header table {
-  padding: 10px;
-}
-
-header table td {
-  display: block;
-  padding: 5px 0;
-}
-
-main {
-  padding: 10px;
-}
-
-footer table {
-  padding: 10px;
-}
-
-footer address {
-  display: block;
-  padding: 5px 0;
-}
-
-header table.nav {
-  display: none; /* Hide the smaller table */
-}
-
-.image-container {
-  float: none;
-  display: inline-block;
-}
-
-*/
 
 body {
   color: black;
