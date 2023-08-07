@@ -4,13 +4,13 @@ body {
   font-size: 14px;
   margin: 0;
   padding: 0;
-  background-color: D1FFD1;
-  color: #3a773a;
+  background-color: #d1ffd1;
+  color: #333;
 }
 
 /* Header styles */
 header {
-  background-color: #213075;
+  background-color: #3f573f;
   color: #fff;
   padding: 1px;
 }
