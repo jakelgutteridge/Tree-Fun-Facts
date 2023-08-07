@@ -1,131 +1,34 @@
-/* Body styles */
-body {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-/* Header styles */
+/* Example mobile-specific changes */
 header {
-  background-color: #213075;
-  color: #fff;
-  padding: 10px; /* Increased padding for mobile */
-  text-align: center; /* Center header text */
-}
-
-h1 {
-  text-transform: uppercase;
-  font-size: 24px; /* Increase font size for mobile */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-
-li {
-  margin-bottom: 10px; /* Reduced margin for mobile */
-}
-
-.menu li {
-  font-size: 18px; /* Increase font size for mobile */
-  margin-bottom: 1em; /* Adjusted margin for mobile */
-  text-transform: uppercase;
-}
-
-/* Main content styles */
-main {
-  padding: 10px; /* Reduced padding for mobile */
-  width: 100%;
-  margin: 0;
-}
-
-/* Links styles */
-a {
-  color: #3b52b8;
-  text-decoration: none;
-}
-
-a:hover, a:focus {
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #00ad00;
-}
-
-/* Buttons styles */
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #213075;
-  color: #fff;
-  border: none;
-  border-radius: 0px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.button:hover {
-  background-color: #172254;
-}
-
-/* Input styles */
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Form styles */
-form {
-  margin-bottom: 10px; /* Reduced margin for mobile */
-}
-
-/* Footer styles */
-footer {
-  background-color: #213075;
-  color: #fff;
   padding: 10px;
-  text-align: center; /* Center footer text */
 }
 
-/* Additional styles specific to your page structure */
-/* Add your own styles here */
-
-.image-container {
-  text-align: center;
+header h1 {
+  margin: 10px 0;
 }
 
-img {
-  max-width: 100%; /* Make images responsive */
+header table {
+  padding: 10px;
 }
 
-.caption-container {
-  position: relative;
+header table td {
+  display: block;
+  padding: 5px 0;
 }
 
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 8px;
-  text-align: center; /* Center caption text */
+main {
+  padding: 10px;
 }
 
-hr {
-  border-top: 1px solid #c9c9c9;
-  border-bottom: 0;
-  border-left: 0;
-  border-right: 0;
-  margin: 15px 0; /* Adjusted margin for mobile */
+footer table {
+  padding: 10px;
+}
+
+footer address {
+  display: block;
+  padding: 5px 0;
+}
+
+header table.nav {
+  display: none; /* Hide the smaller table */
 }
