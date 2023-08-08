@@ -131,9 +131,25 @@ hr {
   margin-bottom: 20px;
 }
 
+
+
+
+
+
+.image-table-right {
+  float: right;
+  margin-left: 16px;
+}
+
+.image-table-left {
+  float: left;
+  margin-right: 16px;
+}
+
+
 /* Mobile styles */
 @media (max-width: 767px) {
-  .image-table {
+  .image-table-right, .image-table-left {
     float: none;
     margin: 0 auto;
   }
