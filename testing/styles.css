@@ -4,7 +4,7 @@ body {
   font-size: 14px;
   margin: 0;
   padding: 0;
-  background-color: #ecffec;
+  background-color: #f3fff3;
   color: #333;
 }
 
@@ -89,7 +89,7 @@ form {
 
 /* Footer styles */
 footer {
-  background-color: #d1ffd1;
+  background-color: #3f573f;
   color: #fff;
   padding: 10px;
 
