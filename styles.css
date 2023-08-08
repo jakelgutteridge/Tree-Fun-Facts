@@ -104,24 +104,6 @@ footer {
   text-align: center; /* Center the caption horizontally */
 }
 
-
-
-
-/* Mobile styles - centered using flexbox */
-@media (max-width: 768px) { /* Adjust the breakpoint as needed */
-  .image-container {
-    float: none; /* Reset float */
-    display: block; /* Reset display property */
-    margin: 10px auto; /* Centered with margin */
-  }
-}
-
-
-
-
-
-
-
 img {
   display: block;
 }
