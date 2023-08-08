@@ -130,21 +130,3 @@ hr {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-
-
-
-
-/* Mobile styles - centered using flexbox */
-@media (max-width: 768px) { /* Adjust the breakpoint as needed */
-  .image-container {
-    float: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto; /* Centered with margin */
-  }
-  
-  .image-container img {
-    float: none; /* Reset float */
-  }
-}
