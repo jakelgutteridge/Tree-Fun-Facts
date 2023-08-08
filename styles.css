@@ -15,12 +15,14 @@ header {
   padding: 1px;
 }
 
+/*
 .title {
   background-color: #d1d1d1;
   color: #333;
   padding: 0px;
   line-height: 8px;
 }
+*/
 
 h1 {
   text-transform: uppercase;
