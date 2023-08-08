@@ -102,15 +102,15 @@ footer {
   position: relative;
   display: inline-block; /* or use "block" if you want it to take the full width of its container */
   text-align: center; /* Center the caption horizontally */
+}
+
+img {
+  display: block;
   border: 1px solid #ddd;
   border-radius: 3px;
   padding: 5px;
   width: 150px;
   color: #ffffff;
-}
-
-img {
-  display: block;
 }
 
 .caption-container {
