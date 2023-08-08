@@ -106,6 +106,7 @@ footer {
 
 img {
   display: block;
+  border: 3px #ffffff;
 }
 
 .caption-container {
