@@ -130,3 +130,11 @@ hr {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .image-table {
+    float: none;
+    margin: 0 auto;
+  }
+}
