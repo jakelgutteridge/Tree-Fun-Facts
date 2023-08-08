@@ -24,7 +24,7 @@ header {
 }
 */
 
-h1 {
+.header-title {
   text-transform: uppercase;
 }
 
