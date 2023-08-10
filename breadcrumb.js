@@ -7,19 +7,19 @@ function generateBreadcrumb() {
     let breadcrumbHTML = '<a href="/">Home</a>';
     let path = '/';
 
-    for (let i = 0; i < segments.length; i++) {
-        const segment = segments[i];
-        path += segment + '/';
+    (async () => {
+        for (let i = 0; i < segments.length; i++) {
+            const segment = segments[i];
+            path += segment + '/';
 
-        getTitleFromMeta(path, segment)
-            .then(title => {
-                breadcrumbHTML += ` &gt; <a href="${path}">${title}</a>`;
+            const title = await getTitleFromMeta(path, segment);
+            breadcrumbHTML += ` &gt; <a href="${path}">${title}</a>`;
+
+            if (i === segments.length - 1) {
                 breadcrumb.innerHTML = breadcrumbHTML;
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    }
+            }
+        }
+    })();
 }
 
 async function getTitleFromMeta(path, segment) {
