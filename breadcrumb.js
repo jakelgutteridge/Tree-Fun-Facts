@@ -15,11 +15,20 @@ function generateBreadcrumb() {
 
 async function getTitleFromMeta(segment, isLastSegment) {
     if (segment.endsWith('.html')) {
-        return ` &gt; <a href="${segment}"${isLastSegment ? ' class="current"' : ''}>${document.title}</a>`;
+        return ` &gt; <a href="${segment}"${isLastSegment ? ' class="current"' : ''}>${await getTitleFromHTML(segment)}</a>`;
     } else {
         const title = await getTitleFromIndex(segment);
         return ` &gt; <a href="${segment + '/index.html'}"${isLastSegment ? ' class="current"' : ''}>${title}</a>`;
     }
+}
+
+async function getTitleFromHTML(url) {
+    const response = await fetch(url);
+    const text = await response.text();
+    const titleTagStart = text.indexOf('<title>');
+    const titleTagEnd = text.indexOf('</title>', titleTagStart);
+    const title = text.substring(titleTagStart + 7, titleTagEnd);
+    return title;
 }
 
 async function getTitleFromIndex(directory) {
