@@ -5,15 +5,16 @@ function generateBreadcrumb() {
     const segments = url.split('/').filter(segment => segment !== '');
 
     let breadcrumbHTML = '<a href="/">Home</a>';
-
     let path = '/';
+
     for (let i = 0; i < segments.length; i++) {
         const segment = segments[i];
         path += segment + '/';
-
+        
         getTitleFromMeta(path, segment, i === segments.length - 1)
             .then(titleHTML => {
-                breadcrumb.innerHTML += titleHTML;
+                breadcrumbHTML += titleHTML;
+                breadcrumb.innerHTML = breadcrumbHTML;
             })
             .catch(error => {
                 console.error(error);
