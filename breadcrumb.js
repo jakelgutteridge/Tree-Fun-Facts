@@ -11,10 +11,14 @@ function generateBreadcrumb() {
         const segment = segments[i];
         path += segment + '/';
 
-        breadcrumbHTML += getTitleFromMeta(path, segment, i === segments.length - 1);
+        getTitleFromMeta(path, segment, i === segments.length - 1)
+            .then(titleHTML => {
+                breadcrumb.innerHTML += titleHTML;
+            })
+            .catch(error => {
+                console.error(error);
+            });
     }
-
-    breadcrumb.innerHTML = breadcrumbHTML;
 }
 
 async function getTitleFromMeta(path, segment, isLastSegment) {
