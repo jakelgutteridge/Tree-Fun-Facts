@@ -10,10 +10,10 @@ function generateBreadcrumb() {
     for (let i = 0; i < segments.length; i++) {
         const segment = segments[i];
         path += segment + '/';
-        
-        getTitleFromMeta(path, segment, i === segments.length - 1)
-            .then(titleHTML => {
-                breadcrumbHTML += titleHTML;
+
+        getTitleFromMeta(path, segment)
+            .then(title => {
+                breadcrumbHTML += ` &gt; <a href="${path}">${title}</a>`;
                 breadcrumb.innerHTML = breadcrumbHTML;
             })
             .catch(error => {
@@ -22,7 +22,7 @@ function generateBreadcrumb() {
     }
 }
 
-async function getTitleFromMeta(path, segment, isLastSegment) {
+async function getTitleFromMeta(path, segment) {
     const response = await fetch(path + 'index.html');
     if (response.ok) {
         const text = await response.text();
@@ -30,11 +30,11 @@ async function getTitleFromMeta(path, segment, isLastSegment) {
         const doc = parser.parseFromString(text, 'text/html');
         const titleElement = doc.querySelector('title');
         if (titleElement) {
-            return ` &gt; <a href="${path}"${isLastSegment ? ' class="current"' : ''}>${titleElement.textContent}</a>`;
+            return titleElement.textContent;
         }
     }
 
-    return ` &gt; <a href="${path}"${isLastSegment ? ' class="current"' : ''}>${segment}</a>`;
+    return segment;
 }
 
 window.onload = generateBreadcrumb;
