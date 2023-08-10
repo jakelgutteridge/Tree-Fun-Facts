@@ -164,3 +164,11 @@ hr {
     margin: 0 auto;
   }
 }
+
+.breadcrumb a {
+    color: #ffffff;
+}
+
+.breadcrumb a.current {
+    font-weight: bold;
+}
