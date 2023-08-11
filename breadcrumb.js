@@ -1,43 +1,33 @@
-const breadcrumb = document.getElementById('breadcrumb');
-
-function generateBreadcrumb() {
-    const url = window.location.pathname;
-    const segments = url.split('/').filter(segment => segment !== '');
-
-    let breadcrumbHTML = '<a href="/">Home</a>';
-
-    for (let i = 0; i < segments.length; i++) {
-        breadcrumbHTML += getTitleFromMeta(segments[i], i === segments.length - 1);
-    }
-
-    breadcrumb.innerHTML = breadcrumbHTML;
-}
-
-async function getTitleFromMeta(segment, isLastSegment) {
-    if (segment.endsWith('.html')) {
-        return ` &gt; <a href="${segment}"${isLastSegment ? ' class="current"' : ''}>${await getTitleFromHTML(segment)}</a>`;
-    } else {
-        const title = await getTitleFromIndex(segment);
-        return ` &gt; <a href="${segment + '/index.html'}"${isLastSegment ? ' class="current"' : ''}>${title}</a>`;
-    }
-}
-
-async function getTitleFromHTML(url) {
-    const response = await fetch(url);
-    const text = await response.text();
-    const titleTagStart = text.indexOf('<title>');
-    const titleTagEnd = text.indexOf('</title>', titleTagStart);
-    const title = text.substring(titleTagStart + 7, titleTagEnd);
-    return title;
-}
-
-async function getTitleFromIndex(directory) {
-    const response = await fetch(directory + '/index.html');
-    const text = await response.text();
-    const titleTagStart = text.indexOf('<title>');
-    const titleTagEnd = text.indexOf('</title>', titleTagStart);
-    const title = text.substring(titleTagStart + 7, titleTagEnd);
-    return title;
-}
-
-window.onload = generateBreadcrumb;
+        // Get the current URL path
+        var path = window.location.pathname;
+        
+        // Split the path into segments
+        var segments = path.split('/').filter(function(segment) {
+            return segment !== "";
+        });
+        
+        // Initialize the breadcrumb HTML
+        var breadcrumbHtml = '<a href="/">Home</a> > ';
+        
+        // Loop through the segments to create the breadcrumb
+        var currentPath = "/";
+        for (var i = 0; i < segments.length; i++) {
+            currentPath += segments[i] + '/';
+            var title = segments[i];
+            
+            // Check if the segment is a directory and has an index.html
+            if (i === segments.length - 1 && segments[i].endsWith('.html')) {
+                title = '<strong>' + document.title + '</strong>';
+            } else if (i === segments.length - 1 && segments[i].endsWith('/')) {
+                title = '<strong>Index</strong>';
+            }
+            
+            breadcrumbHtml += '<a href="' + currentPath + '">' + title + '</a>';
+            
+            if (i < segments.length - 1) {
+                breadcrumbHtml += ' > ';
+            }
+        }
+        
+        // Display the breadcrumb
+        document.getElementById('breadcrumb').innerHTML = breadcrumbHtml;
