@@ -20,53 +20,13 @@
 <center>
 
 <big><big><big>
-              <h2>404 Not Found</h2>
-              <p>The requested file was not found on this server.</p>
-          </td>
-        </tr>
-      </table>
-      
-      <p>
-      
-      <table>
-        <tr>
-          <td>
-            <p>Redirecting to home page in</p>
-          </td>
-          <td style="white-space: nowrap;">
-             <div id="countdown"></div>
-          </td>
-        </tr>
-      </table>
+
+<h2>404 Not Found</h2>
+<p>The requested file was not found on this server.</p>
+
 </big></big></big>
 
 </center>
-  
-<script>
-// Set the countdown initial value
-let countdownValue = 10;
-
-// Function to update the countdown display
-function updateCountdown() {
-  const countdownElement = document.getElementById("countdown");
-  countdownElement.textContent = countdownValue;
-  
-  if (countdownValue === 0) {
-    countdownElement.textContent = "0";
-    clearInterval(countdownInterval);
-  }
-  
-  countdownValue--;
-}
-
-// Start the countdown immediately
-updateCountdown();
-const countdownInterval = setInterval(updateCountdown, 1000);
-</script>
-          </td>
-        </tr>
-      </table>
-    <center>
   
 </main>
 
